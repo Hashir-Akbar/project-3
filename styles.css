@@ -1,0 +1,195 @@
+@import url('https://fonts.cdnfonts.com/css/verdana');
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+
+body{
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+}
+.container{
+    max-width: 1500px;
+    margin-inline:auto;
+    
+}
+.container:not(:first-child){
+    padding: 32px;
+    
+}
+h1,h2,h3,h4,h5{
+    margin: 10px 0;
+    letter-spacing: 4px;
+    font-family: 'Segoe UI', sans-serif;
+}
+h1{
+    font-size: 36px;
+}
+h3{
+    font-size: 24px;
+    letter-spacing: 0;
+}
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    letter-spacing: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background: #fff;
+
+}
+.header nav {
+    display: flex;
+    list-style: none;
+}
+
+.header a {
+    padding: 8px 16px;
+}
+.header a:hover{
+    background: #ccc;
+}
+.bold{
+    font-weight: 700;
+}
+.header a .bold{
+    margin-right: 10px;
+}
+/* main */
+.hero{
+    position: relative;
+}
+.hero h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    translate: -50% -50%;
+    color: white;
+}
+.hero h1 .bold{
+    background: #000;
+    opacity: 0.7;
+    padding: 8px 16px;
+    
+}
+
+
+.container h2{
+    padding-block: 1em;
+    margin-block:2em;
+    border-bottom: 1px solid #f1f1f1 ;
+}
+.projects .projects-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1em;
+    align-items: center;
+    
+}
+.projects .projects-cards .card{
+    width: 23.7%;
+   position: relative;
+}
+
+.projects .projects-cards .card .img-text{
+  position: absolute;
+  top: 0;
+  padding:8px 16px;
+  background: #000;
+  color: #fff;
+  left: 0;
+}
+
+.about > h2, .contact >h2{
+    margin-block: .5em;
+    
+}
+.about > p , .contact >p{
+    margin-bottom: 3em;
+}
+.about .about-cards{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.about .about-cards .card img{
+ filter: grayscale(75%);
+}
+
+
+.about .about-cards .card{
+    display: flex;
+    flex-direction: column;
+    width: 23.7%;
+}
+.about .about-cards .card p{
+    margin-block: 1em;
+}
+.about .about-cards .card .industry{
+    color: #666666;
+}
+.about .about-cards .card button{
+    border: none;
+    background: #f1f1f1;
+    padding: 8px 16px;
+}
+.about .about-cards .card button:hover{
+    background: #ccc;
+    cursor: pointer;
+}
+
+
+
+.contact >p {
+    margin-bottom: 1em;
+}
+
+.contact .contact-form input{
+    display: block;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.contact .contact-form input[type='button']{
+    width: auto;
+    padding: 8px 16px;
+    background: #000;
+    color: white;
+    margin-top: 2em;
+}
+
+
+/* footer */
+.footer{
+    padding: 31px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+.footer a{
+    text-decoration: underline;
+}
+
+/* media queries */
+@media (max-width:993px) {
+    .projects .projects-cards .card, .about .about-cards .card {
+        width: 47.9%;
+    }
+}
+@media (max-width:601px) {
+    .projects .projects-cards .card, .about .about-cards .card{
+    width: 100%;
+    }
+    .display-mob-none, .header >nav{
+        display: none ;
+    }
+}
